@@ -1,0 +1,64 @@
+name: ArielSchool
+version: 1.0.0+1
+publish_to: none
+description: A new Flutter project.
+environment: 
+  sdk: '>=3.0.6 <4.0.0'
+
+dependencies: 
+  cupertino_icons: ^1.0.2
+  get: ^4.6.6
+  flutter: 
+    sdk: flutter
+  objectbox: ^2.4.0
+  objectbox_flutter_libs: any
+  shared_preferences: ^2.2.2
+  flutter_native_splash: ^2.3.10
+  # introduction_screen: ^3.1.12
+  
+
+  
+flutter_native_splash:
+  image: assets/8.png
+  color: "435CFF"
+
+dev_dependencies: 
+  #flutter_lints: ^2.0.0
+  build_runner: ^2.4.7
+  flutter_test: 
+    sdk: flutter
+  objectbox_generator: any
+
+flutter: 
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/images/et.jpg
+    - assets/images/g1.jpg
+    - assets/images/g2.jpg
+    - assets/images/g3.jpg
+    - assets/images/g4.jpg
+    - assets/images/g5.jpg
+    - assets/images/g6.jpg
+    - assets/images/g7.jpg
+    - assets/images/et2.jpg
+    - assets/images/et3.png
+    - assets/images/et4.jpg
+    - assets/images/et5.jpg
+    - assets/images/et6.jpg
+    - assets/images/et7.jpg
+    - assets/images/et8.jpg
+    - assets/images/et9.jpg
+    - assets/images/et10.jpg
+    - assets/images/the.png
+    - assets/images/et12.jpg
+    - assets/images/et13.jpg
+    - assets/images/plante.png
+    - assets/images/favoris.png
+    - assets/images/maison.png
+    - assets/images/plante2.png
+    - assets/images/note.png
+    - assets/images/notification.png
+    - assets/images/debloque.png
+

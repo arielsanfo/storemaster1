@@ -1,0 +1,250 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:658872451533216837",
+      "lastPropertyId": "3:5657002605146486917",
+      "name": "Client",
+      "properties": [
+        {
+          "id": "1:158302388880942993",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:8519549158964598049",
+          "name": "nom",
+          "type": 9
+        },
+        {
+          "id": "3:5657002605146486917",
+          "name": "tel",
+          "type": 9
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "2:7776625461745074925",
+      "lastPropertyId": "3:5611379068053034784",
+      "name": "Commande",
+      "properties": [
+        {
+          "id": "1:3609975426433619005",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:8752411603266576474",
+          "name": "dateDeCommande",
+          "type": 10
+        },
+        {
+          "id": "3:5611379068053034784",
+          "name": "montantTotal",
+          "type": 6
+        }
+      ],
+      "relations": [
+        {
+          "id": "1:1929273308209531467",
+          "name": "produitsEtDate",
+          "targetId": "6:3136216773700831061"
+        }
+      ]
+    },
+    {
+      "id": "3:4252884527236650514",
+      "lastPropertyId": "4:3144709538535119667",
+      "name": "Dette",
+      "properties": [
+        {
+          "id": "1:8069777370176473807",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:5008195991906570830",
+          "name": "montantTotal",
+          "type": 8
+        },
+        {
+          "id": "3:925203806956643114",
+          "name": "avance",
+          "type": 8
+        },
+        {
+          "id": "4:3144709538535119667",
+          "name": "clientId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "1:6119982190765956896",
+          "relationTarget": "Client"
+        }
+      ],
+      "relations": [
+        {
+          "id": "2:2977089080308732066",
+          "name": "produitsEtQteEtDate",
+          "targetId": "7:4494236094051863945"
+        }
+      ]
+    },
+    {
+      "id": "4:600215792172225283",
+      "lastPropertyId": "3:8199008440879801459",
+      "name": "Iventaire",
+      "properties": [
+        {
+          "id": "1:1359892252700621398",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:2593876917845586858",
+          "name": "dateDeDecompte",
+          "type": 10
+        },
+        {
+          "id": "3:8199008440879801459",
+          "name": "montantTotal",
+          "type": 6
+        }
+      ],
+      "relations": [
+        {
+          "id": "3:2516195554605729117",
+          "name": "produitsEtQuantite",
+          "targetId": "6:3136216773700831061"
+        }
+      ]
+    },
+    {
+      "id": "5:6198460336702335464",
+      "lastPropertyId": "9:3007756304898815976",
+      "name": "Produit",
+      "properties": [
+        {
+          "id": "1:2490436348021970827",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:7428232425349843900",
+          "name": "libele",
+          "type": 9
+        },
+        {
+          "id": "3:7621288212408164629",
+          "name": "date_Exp",
+          "type": 10
+        },
+        {
+          "id": "4:7352282497906507797",
+          "name": "prix_Vente",
+          "type": 8
+        },
+        {
+          "id": "6:1748998348639261803",
+          "name": "specialite",
+          "type": 9
+        },
+        {
+          "id": "7:2863614716990386282",
+          "name": "tel",
+          "type": 8
+        },
+        {
+          "id": "8:1827446302974285067",
+          "name": "sexe",
+          "type": 9
+        },
+        {
+          "id": "9:3007756304898815976",
+          "name": "date_naissance",
+          "type": 10
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "6:3136216773700831061",
+      "lastPropertyId": "3:3408566158961334966",
+      "name": "ProduitQuantite",
+      "properties": [
+        {
+          "id": "1:3748254664458814657",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:8052303341738834179",
+          "name": "quantite",
+          "type": 6
+        },
+        {
+          "id": "3:3408566158961334966",
+          "name": "produitId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "2:2341200231070417422",
+          "relationTarget": "Produit"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "7:4494236094051863945",
+      "lastPropertyId": "4:3242007724038846589",
+      "name": "ProduitQuantiteDate",
+      "properties": [
+        {
+          "id": "1:6059084270839534161",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:3403245841902463790",
+          "name": "quantite",
+          "type": 6
+        },
+        {
+          "id": "3:6651603807701857308",
+          "name": "date",
+          "type": 10
+        },
+        {
+          "id": "4:3242007724038846589",
+          "name": "produitId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "3:4514324744481767169",
+          "relationTarget": "Produit"
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "7:4494236094051863945",
+  "lastIndexId": "3:4514324744481767169",
+  "lastRelationId": "3:2516195554605729117",
+  "lastSequenceId": "0:0",
+  "modelVersion": 5,
+  "modelVersionParserMinimum": 5,
+  "retiredEntityUids": [],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [
+    7849500681258502750
+  ],
+  "retiredRelationUids": [],
+  "version": 1
+}
