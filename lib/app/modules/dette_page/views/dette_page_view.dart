@@ -45,7 +45,7 @@ class DettePageView extends GetView<DettePageController> {
                 SizedBox(
                   height: 10,
                 ),
-                custom_Text("Choisir le Client :", 19),
+                custom_Text("Choisir l'etudiant :", 20),
                 SizedBox(
                   height: 5,
                 ),
@@ -341,7 +341,7 @@ class DettePageView extends GetView<DettePageController> {
                                           Get.back();
                                           Get.back();
                                           Get.bottomSheet(myBottomSheet());
-                                          Messenger("Produit ajouté", false)
+                                          Messenger("Etudiant ajouté", false)
                                               .display();
                                         } catch (e) {
                                           print(e.toString());
