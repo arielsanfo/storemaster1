@@ -16,20 +16,23 @@ class HomeView extends GetView<HomeController> {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        title: custom_Text("AFRICA-TECH", 25,
-            fontWeight: FontWeight.bold,
-            color: white_Color,
-            ),
+        title: custom_Text(
+          "AFRICA-TECH",
+          25,
+          fontWeight: FontWeight.bold,
+          color: white_Color,
+        ),
         backgroundColor: primary_Color,
         centerTitle: true,
       ),
       persistentFooterButtons: <Widget>[
-        
+        HomeView(),
         IconButton(
           onPressed: () {},
           icon: Icon(
             Icons.zoom_out_map,
-            size: 40,color: primary_Color,
+            size: 40,
+            color: primary_Color,
           ),
         ),
         SizedBox(
@@ -37,7 +40,11 @@ class HomeView extends GetView<HomeController> {
         ),
         IconButton(
           onPressed: () {},
-          icon: Icon(Icons.house, size: 40,color: primary_Color,),
+          icon: Icon(
+            Icons.house,
+            size: 40,
+            color: primary_Color,
+          ),
         ),
         SizedBox(
           width: 35,
@@ -46,7 +53,8 @@ class HomeView extends GetView<HomeController> {
             onPressed: () {},
             icon: Icon(
               Icons.account_balance_outlined,
-              size: 40,color: primary_Color,
+              size: 40,
+              color: primary_Color,
             )),
         SizedBox(
           width: 35,
@@ -55,19 +63,20 @@ class HomeView extends GetView<HomeController> {
             onPressed: () {},
             icon: Icon(
               Icons.add_comment,
-              size: 40,color: primary_Color,
+              size: 40,
+              color: primary_Color,
             )),
       ],
       body: ListView(
         children: [
           Container(
             decoration: BoxDecoration(
-                gradient: LinearGradient(colors: [
-                                  Colors.blue,
-                                  Color.fromARGB(255, 122, 248, 139),
-                                  Color.fromARGB(143, 94, 115, 250),
-                                  Color.fromARGB(143, 69, 221, 210),
-                                ]),
+              gradient: LinearGradient(colors: [
+                Colors.blue,
+                Color.fromARGB(255, 122, 248, 139),
+                Color.fromARGB(143, 94, 115, 250),
+                Color.fromARGB(143, 69, 221, 210),
+              ]),
               // color: Color.fromARGB(196, 235, 235, 235),
             ),
             child: Column(
