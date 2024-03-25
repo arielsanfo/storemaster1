@@ -7,6 +7,7 @@ import 'package:ArielSchool/main.dart';
 import 'package:ArielSchool/app/data/modal.dart';
 
 class DettePageController extends GetxController {
+  var searchControllers = TextEditingController();
   var avanceController = TextEditingController().obs;
   Rx<bool> choisi = false.obs;
   Rx<Client> clientChoisi = Rx<Client>(Client(nom: "Anonyme", tel: ""));
@@ -30,6 +31,7 @@ class DettePageController extends GetxController {
   void onClose() {
     super.onClose();
   }
+ 
 
   @override
   void onInit() async {
@@ -38,6 +40,7 @@ class DettePageController extends GetxController {
     clients.value = box.getAll();
     listeProduits.value = produitController.getAllProduitOrder();
     dettes.value = await detteController.getAllDettes();
+     listeProduits(produitController.getAllProduit());
     prodChoisi.value = listeProduits.value.first;
   }
 

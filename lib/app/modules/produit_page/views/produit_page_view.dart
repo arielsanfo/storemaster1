@@ -63,8 +63,8 @@ class ProduitPageView extends GetView<ProduitPageController> {
               SizedBox(
                 height: 20,
               ),
-              custom_TextFormField(ctrl.sexeController, custom_Text("tel", 18),
-                  "Entrez le numero de telephone",
+              custom_TextFormField(ctrl.sexeController, custom_Text("sexe", 18),
+                  "Entrez votre sexe",
                   typeKeyboard: TextInputType.name),
               SizedBox(
                 height: 20,
@@ -408,10 +408,10 @@ class ProduitPageView extends GetView<ProduitPageController> {
                                 SizedBox(
                                   height: 7,
                                 ),
-                                custom_Text(
-                                    "Date de naissance: ${p.date_naissance} ",
-                                    20,
-                                    fontWeight: FontWeight.bold),
+                                // custom_Text(
+                                //     "Date de naissance: ${p.date_naissance} ",
+                                //     20,
+                                //     fontWeight: FontWeight.bold),
                                 SizedBox(
                                   height: 7,
                                 ),

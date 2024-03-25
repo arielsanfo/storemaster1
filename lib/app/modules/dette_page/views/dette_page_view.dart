@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ArielSchool/app/Reusables_Components/Customs_reusables_Widget.dart';
 import 'package:ArielSchool/app/data/controllers/client_Controller.dart';
+
 import 'package:ArielSchool/app/data/modal.dart';
-import 'package:ArielSchool/main.dart';
-import '../controllers/dette_page_controller.dart';
+import 'package:ArielSchool/main.dart';import '../controllers/dette_page_controller.dart';
 
 // ignore: must_be_immutable
 class DettePageView extends GetView<DettePageController> {
@@ -15,6 +15,8 @@ class DettePageView extends GetView<DettePageController> {
   var ctrl = Get.put(DettePageController());
 
   Timer? _timer;
+  
+  get produitController => null;
 
   Container myBottomSheet() {
     return Container(
@@ -806,8 +808,18 @@ class DettePageView extends GetView<DettePageController> {
           width: Get.width,
           child: Column(
             children: [
-              custom_TextFormField(ctrl.searchController.value,
-                  Text("Rechercher"), "Recherche une dette"),
+               custom_TextFormField(ctrl.searchControllers, Text("recherche"),
+                "rechercher un produit",
+                suffixIcon: IconButton(
+                    onPressed: () async {
+                      // ctrl.listeProduits.value = await produitController
+                      //     .rechercherDettesParNomClient(ctrl.searchControllers);
+                      // Get.reload();
+                    },
+                    icon: Icon(
+                      Icons.search,
+                      color: primary_Color,
+                    ))),
               SizedBox(
                 height: 15,
               ),

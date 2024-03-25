@@ -26,7 +26,7 @@ class HomeView extends GetView<HomeController> {
         centerTitle: true,
       ),
       persistentFooterButtons: <Widget>[
-        HomeView(),
+       
         IconButton(
           onPressed: () {},
           icon: Icon(
