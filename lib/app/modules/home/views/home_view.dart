@@ -194,7 +194,7 @@ class HomeView extends GetView<HomeController> {
               leading: Icon(Icons.home),
               title: Text('Accueil'),
               onTap: () {
-                Navigator.pus
+                // Navigator.pus
               },
             ),
             ListTile(
