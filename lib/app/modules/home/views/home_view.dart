@@ -1,3 +1,4 @@
+import 'package:ArielSchool/app/modules/home/views/drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ArielSchool/app/Reusables_Components/Customs_reusables_Widget.dart';
@@ -26,7 +27,6 @@ class HomeView extends GetView<HomeController> {
         centerTitle: true,
       ),
       persistentFooterButtons: <Widget>[
-       
         IconButton(
           onPressed: () {},
           icon: Icon(
@@ -39,7 +39,9 @@ class HomeView extends GetView<HomeController> {
           width: 35,
         ),
         IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(context, MaterialPageRoute(builder: ((context) => DemoMWDrawerScreen3())));
+          },
           icon: Icon(
             Icons.house,
             size: 40,
