@@ -40,7 +40,10 @@ class HomeView extends GetView<HomeController> {
         ),
         IconButton(
           onPressed: () {
-            Navigator.push(context, MaterialPageRoute(builder: ((context) => DemoMWDrawerScreen3())));
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: ((context) => DemoMWDrawerScreen3())));
           },
           icon: Icon(
             Icons.house,
@@ -175,9 +178,52 @@ class HomeView extends GetView<HomeController> {
           ),
         ],
       ),
-      drawer: Container(
-        width: Get.width / 1.4,
-        decoration: BoxDecoration(color: black_Color),
+      drawer: Drawer(
+        child: ListView(
+          children: <Widget>[
+            UserAccountsDrawerHeader(
+              accountName: Text('Nom Utilisateur'),
+              accountEmail: Text('utilisateur@example.com'),
+              currentAccountPicture: CircleAvatar(
+                minRadius: 80,
+                maxRadius: 80,
+                backgroundImage: AssetImage('assets/images/et2.jpg'),
+              ),
+            ),
+            ListTile(
+              leading: Icon(Icons.home),
+              title: Text('Accueil'),
+              onTap: () {},
+            ),
+            ListTile(
+              leading: Icon(Icons.person),
+              title: Text('Profil'),
+              onTap: () {},
+            ),
+            ListTile(
+              leading: Icon(Icons.notifications),
+              title: Text('Notifications'),
+              onTap: () {},
+            ),
+            ListTile(
+              leading: Icon(Icons.timelapse),
+              title: Text('schedule'),
+              onTap: () {
+                //
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.settings),
+              title: Text('Paramètres'),
+              onTap: () {},
+            ),
+            ListTile(
+              leading: Icon(Icons.show_chart),
+              title: Text('Statistiques'),
+              onTap: () {},
+            ),
+          ],
+        ),
       ),
     );
   }

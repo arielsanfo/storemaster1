@@ -92,7 +92,7 @@ class _DemoMWDrawerScreen3State extends State<DemoMWDrawerScreen3> {
   }
 
   void init() async {
-    await Future.delayed(Duration(seconds: 1)).then((value) => openDrawer());
+    await Future.delayed(Duration(seconds: 1)).then((value) => ());
   }
 
   @override
@@ -230,10 +230,7 @@ class _DemoMWDrawerScreen3State extends State<DemoMWDrawerScreen3> {
                               },
                             ),
                             SizedBox(width: 8,),
-                            Text('Hello, User',
-
-
-style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+                            Text('Hello, User',style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
                           ],
                         ),
                         Expanded(
