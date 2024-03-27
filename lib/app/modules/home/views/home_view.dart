@@ -1,4 +1,3 @@
-import 'package:ArielSchool/app/modules/home/views/drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ArielSchool/app/Reusables_Components/Customs_reusables_Widget.dart';
@@ -26,62 +25,49 @@ class HomeView extends GetView<HomeController> {
         backgroundColor: primary_Color,
         centerTitle: true,
       ),
-      persistentFooterButtons: <Widget>[
-        IconButton(
-          onPressed: () {},
-          icon: Icon(
-            Icons.zoom_out_map,
-            size: 40,
-            color: primary_Color,
+        bottomNavigationBar: Container(
+          height: 68,
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [Colors.blue, Colors.purple], // Couleurs du dégradé
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+            ),
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: <Widget>[
+              IconButton(
+                icon: Icon(Icons.house,size: 35,),
+                onPressed: () {},
+                color: Colors.white,focusColor: red_Color,
+              ),
+              IconButton(
+                icon: Icon(Icons.message,size: 35),
+                onPressed: () {},
+                color: Colors.white,
+              ),
+              IconButton(
+                icon: Icon(Icons.account_circle,size: 35),
+                onPressed: () {},
+                color: Colors.white,
+              ),
+              IconButton(
+                icon: Icon(Icons.favorite,size: 35),
+                onPressed: () {},
+                color: Colors.white,
+              ),
+            ],
           ),
         ),
-        SizedBox(
-          width: 35,
-        ),
-        IconButton(
-          onPressed: () {
-            Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: ((context) => DemoMWDrawerScreen3())));
-          },
-          icon: Icon(
-            Icons.house,
-            size: 40,
-            color: primary_Color,
-          ),
-        ),
-        SizedBox(
-          width: 35,
-        ),
-        IconButton(
-            onPressed: () {},
-            icon: Icon(
-              Icons.account_balance_outlined,
-              size: 40,
-              color: primary_Color,
-            )),
-        SizedBox(
-          width: 35,
-        ),
-        IconButton(
-            onPressed: () {},
-            icon: Icon(
-              Icons.add_comment,
-              size: 40,
-              color: primary_Color,
-            )),
-      ],
+      
       body: ListView(
         children: [
           Container(
             decoration: BoxDecoration(
-              gradient: LinearGradient(colors: [
-                Colors.blue,
-                Color.fromARGB(255, 122, 248, 139),
-                Color.fromARGB(143, 94, 115, 250),
-                Color.fromARGB(143, 69, 221, 210),
-              ]),
+              gradient: LinearGradient(
+              colors: [Colors.blue, Colors.purple]
+              ),
               // color: Color.fromARGB(196, 235, 235, 235),
             ),
             child: Column(

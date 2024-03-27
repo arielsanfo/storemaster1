@@ -23,11 +23,9 @@ class DettePageView extends GetView<DettePageController> {
       height: Get.height / 1.2,
       padding: EdgeInsets.all(15),
       decoration: BoxDecoration(
-          gradient: LinearGradient(colors: [
-            Colors.blue,
-            Color.fromARGB(255, 180, 226, 238),
-            Color.fromARGB(143, 69, 221, 210),
-          ]),
+          gradient: LinearGradient(
+            colors: [Colors.blue, Colors.purple]
+          ),
           color: white_Color,
           borderRadius: BorderRadius.only(
               topLeft: Radius.circular(35), topRight: Radius.circular(35))),
@@ -812,9 +810,9 @@ class DettePageView extends GetView<DettePageController> {
                 "rechercher un produit",
                 suffixIcon: IconButton(
                     onPressed: () async {
-                      // ctrl.listeProduits.value = await produitController
-                      //     .rechercherDettesParNomClient(ctrl.searchControllers);
-                      // Get.reload();
+                      ctrl.listeProduits.value = await produitController
+                          .rechercherDettesParNomClient(ctrl.searchControllers);
+                      Get.reload();
                     },
                     icon: Icon(
                       Icons.search,

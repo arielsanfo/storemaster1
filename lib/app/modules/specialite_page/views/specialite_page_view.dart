@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
 import 'package:ArielSchool/app/modules/home/controllers/details.dart';
-// import 'package:ArielSchool/details.dart';
+// import 'package:ArielSchool/app/modules/specialite_page/controllers/specialite_page_controller.dart';
+import 'package:flutter/material.dart';
 
 // import 'package:/Apropos_detail.dart';
 class specialite extends StatefulWidget {

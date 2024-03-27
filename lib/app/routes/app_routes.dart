@@ -10,6 +10,8 @@ abstract class Routes {
   static const PRODUIT_PAGE = _Paths.PRODUIT_PAGE;
   static const INVENTAIRE_PAGE = _Paths.INVENTAIRE_PAGE;
   static const COMMANDE_PAGE = _Paths.COMMANDE_PAGE;
+  static const SPECIALITE_PAGE = _Paths.SPECIALITE_PAGE;
+  static const AUTHENTIFICATION_PAGE = _Paths.AUTHENTIFICATION_PAGE;
 }
 
 abstract class _Paths {
@@ -21,4 +23,6 @@ abstract class _Paths {
   static const PRODUIT_PAGE = '/produit-page';
   static const INVENTAIRE_PAGE = '/inventaire-page';
   static const COMMANDE_PAGE = '/commande-page';
+  static const AUTHENTIFICATION_PAGE = '/authentification-page';
+  static const SPECIALITE_PAGE = '/specialite-page';
 }

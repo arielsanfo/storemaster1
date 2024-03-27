@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:ArielSchool/app/Reusables_Components/Customs_reusables_Widget.dart';
 class showdetails extends StatelessWidget {
   final String nomdetail, posterdetail,posterdetails;
   final int like;
@@ -15,22 +15,22 @@ class showdetails extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        elevation:10,
+        elevation:5,
         actions: [IconButton(onPressed: () {},
-         icon: Icon(Icons.details,),iconSize: 40,color: const Color.fromARGB(255, 88, 0, 104))],
+         icon: Icon(Icons.details,),iconSize: 30,color: const Color.fromARGB(255, 88, 0, 104))],
         title: Center(
           child: Text(
             nomdetail,
             style: TextStyle( fontSize: 30),
           ),
         ),
-        backgroundColor: Colors.transparent,
+        backgroundColor:primary_Color,
       ),
       body: ListView(
         children: <Widget>[
         Container(
-          width: 200,
-          height: 500,
+          width: 150,
+          height: 400,
           
           // color: Colors.amberAccent,
           decoration: BoxDecoration(
@@ -144,7 +144,7 @@ class showdetails extends StatelessWidget {
       ]
       ),
       
-      // backgroundColor: Colors.white10,
+  
     );
   }
 }

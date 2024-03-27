@@ -32,10 +32,10 @@ class ProduitPageView extends GetView<ProduitPageController> {
               SizedBox(
                 height: 5,
               ),
-              // Divider(
-              //   height: 1,
-              //   color: Color.fromARGB(255, 49, 49, 49),
-              // ),
+              Divider(
+                height: 1,
+                color: Color.fromARGB(255, 49, 49, 49),
+              ),
               SizedBox(
                 height: 20,
               ),
@@ -248,11 +248,9 @@ class ProduitPageView extends GetView<ProduitPageController> {
                                 bottom: 20, left: 10, right: 10),
                             padding: EdgeInsets.all(10),
                             decoration: BoxDecoration(
-                                gradient: LinearGradient(colors: [
-                                  Colors.blue,
-                                  Color.fromARGB(255, 180, 226, 238),
-                                  Color.fromARGB(143, 69, 221, 210),
-                                ]),
+                                gradient: LinearGradient(
+                                  colors: [Colors.blue, Colors.purple]
+                                ),
                                 borderRadius: BorderRadius.circular(20),
                                 // color: Colors.deepPurple,
                                 boxShadow: [

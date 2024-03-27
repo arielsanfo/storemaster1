@@ -58,6 +58,16 @@ class AppPages {
       page: () =>  CommandePageView(),
       binding: CommandePageBinding(),
     ),
-    // GetPage(name: _Paths.Apropos_details, page: ()=>showdetails)
+     GetPage(
+      name: _Paths.AUTHENTIFICATION_PAGE,
+      page: () =>  CommandePageView(),
+      binding: CommandePageBinding(),
+    ),
+     GetPage(
+      name: _Paths.SPECIALITE_PAGE,
+      page: () =>  CommandePageView(),
+      binding: CommandePageBinding(),
+    ),
+  
   ];
 }
